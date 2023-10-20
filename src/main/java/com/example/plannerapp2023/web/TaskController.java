@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
@@ -54,6 +55,24 @@ public class TaskController {
     }
 
 
+    @GetMapping("/assignMe/{id}")
+    private String assignMeTask(@PathVariable("id") Long id) {
+        taskService.assaignMeTask(id);
+        return "redirect:/";
+    }
+
+    @GetMapping("/return/{id}")
+    private String returnTask(@PathVariable("id") Long id) {
+        taskService.returnTask(id);
+        return "redirect:/";
+    }
+
+
+    @GetMapping("/del/{id}")
+    private String delateTask(@PathVariable("id") Long id) {
+        taskService.del(id);
+        return "redirect:/";
+    }
 
 
 
