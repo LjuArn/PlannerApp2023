@@ -34,8 +34,7 @@ public class TaskServiceImpl implements TaskService {
     public void addTask(TaskServiceModel taskServiceModel) {
 
         TaskEntity taskNew = modelMapper.map(taskServiceModel, TaskEntity.class);
-
-       taskNew.setPriority(priorityService.findTaskByPriorityNameEnum(taskServiceModel.getPriorityNameEnum()));
+        taskNew.setPriority(priorityService.findTaskByPriorityNameEnum(taskServiceModel.getPriorityNameEnum()));
 
         taskRepository.save(taskNew);
     }
@@ -79,7 +78,6 @@ public class TaskServiceImpl implements TaskService {
 
         taskRepository.save(taskWithNoUser);
     }
-
 
 
     @Override

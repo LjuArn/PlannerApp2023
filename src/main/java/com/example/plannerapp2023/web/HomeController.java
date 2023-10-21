@@ -49,16 +49,3 @@ public class HomeController {
 
 }
 
-
-
-
-//            modelAndView.addObject("myTasks", taskService.findMyTasks(curUserId));
-//
-//          //  Long totalTasks = taskService.countTasks(curUserId);
-//          //  modelAndView.addObject("totalUnassignedTasks", totalTasks);
-//
-//
-//          //  Long myTotalTasks = taskService.countMyTasks(curUserId);
-//           // modelAndView.addObject("totalMyTasks", myTotalTasks);
-//
-//
